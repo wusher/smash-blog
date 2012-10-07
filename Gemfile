@@ -31,6 +31,6 @@ group :development, :test do
   gem 'pry'
   gem 'irbtools'
   gem 'rspec-rails'
-  gem 'rspec-fire'
+  gem 'rr'
   gem 'rspec-given'
 end
