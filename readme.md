@@ -1,8 +1,8 @@
 ## features: 
 
 # setup rspec 
-* convert app to haml
-* create a basic page home page
+# convert app to haml
+# create a basic page home page
 * deploy on heroku 
 * add admin user
 * create a post:
