@@ -29,7 +29,7 @@ end
 group :development, :test do 
   gem 'spork'
   gem 'pry'
-  gem 'irbtools'
+  gem 'irbtools', :require => false
   gem 'rspec-rails'
   gem 'rr'
   gem 'rspec-given'

@@ -1,4 +1,12 @@
+require 'irbtools/configure'
+
+
 Smash::Application.configure do
+
+  #disable hirb in irbtools 
+  Irbtools.remove_library :hirb
+  Irbtools.start
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
