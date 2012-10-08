@@ -3,8 +3,8 @@
 # setup rspec 
 # convert app to haml
 # create a basic page home page
-* deploy on heroku 
-* add admin user
+# deploy on heroku 
+# add admin user/set up devise
 * create a post:
   * normal post
   * parse code 
