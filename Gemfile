@@ -26,6 +26,12 @@ group :assets do
 end
 
 
+group :development do
+  gem 'guard'
+  gem 'guard-rspec' 
+  gem 'rb-fsevent', '~> 0.9.1'
+end
+
 group :development, :test do 
   gem 'spork'
   gem 'pry'
