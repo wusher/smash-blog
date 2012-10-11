@@ -5,31 +5,43 @@
 # create a basic page home page
 # deploy on heroku 
 # add admin user/set up devise
+# create a post model:
+  # slugify title 
+  # parse markdown 
+  # parse code 
+* create basic post views
+  * index 
+  * details 
 * create a post:
   * normal post
-  * parse code 
-* create other posts 
   * quote post
   * code 
 * display post 
 * display posts 
 * make layout pretty 
 * add about me
+* add tags 
+
+
+
+
+
+## post model 
+
+* title 
+* slug
+* body
+* body_html
+* pubdate
+* is published 
 
 
 normal: 
-  title 
-  body
-
-
 
   
 quote:
-  quote
   source
   link
 
 code: 
   code
-  short text 
-  summary

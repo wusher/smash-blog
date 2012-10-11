@@ -16,6 +16,9 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
 
+gem "redcarpet", "~> 2.1.1"
+gem "coderay", "~> 1.0.8"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -37,6 +40,6 @@ group :development, :test do
   gem 'pry'
   gem 'irbtools', :require => false
   gem 'rspec-rails'
-  gem 'rr'
+  gem 'rspec-fire'
   gem 'rspec-given'
 end
