@@ -6,7 +6,7 @@ describe Post do
   describe "#publish" do 
     Given { post.title = "has a title" }
     context "publish sucesseds" do 
-      When(:is_published) { post.publish! }
+      When(:is_published) { post.publish }
       Then { is_published.should be_true}
       Then { post.published?.should be_true}
       Then { post.pubdate.should_not be_nil }
@@ -14,13 +14,13 @@ describe Post do
     context "publish fails" do 
       context "title is a duplicate" do 
         Given { post.dup.publish! }
-        When(:is_published) { post.publish! }
+        When(:is_published) { post.publish }
         Then  { is_published.should be_false }
       end
 
       context "title is empty" do 
         Given { post.title = "" }
-        When(:is_published) { post.publish! }
+        When(:is_published) { post.publish }
         Then  { is_published.should be_false }
       end
     end

@@ -10,9 +10,10 @@ class Post < ActiveRecord::Base
   before_validation :update_slug
 
   def publish!
-    self.pubdate ||= Time.now
-    self.published = true 
-    self.save
+    publish_me(true)
+  end
+  def publish
+    publish_me(false)
   end
 
   def slugify(raw_text)
@@ -36,6 +37,16 @@ class Post < ActiveRecord::Base
 
   def update_slug 
     self.slug = slugify(self.title)
+  end
+
+  def publish_me(raise_exceptions)
+    self.pubdate ||= Time.now
+    self.published = true 
+    if raise_exceptions
+      self.save!
+    else 
+      self.save
+    end
   end
 
 end

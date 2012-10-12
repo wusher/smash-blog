@@ -10,12 +10,14 @@
   # parse markdown 
   # parse code 
 * create basic post views
-  * index 
-  * details 
+  # index 
+  # details 
+* add security to post views 
 * create a post:
   * normal post
   * quote post
   * code 
+  * add security
 * display post 
 * display posts 
 * make layout pretty 
