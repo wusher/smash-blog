@@ -6,25 +6,27 @@
 # deploy on heroku 
 # add admin user/set up devise
 # create a post model:
-  # slugify title 
-  # parse markdown 
-  # parse code 
-* create basic post views
-  # index 
-  # details 
-* add security to post views 
+# # slugify title 
+# # parse markdown 
+# # parse code 
+# create basic post views
+# # index 
+# # details 
 * create a post:
   * normal post
-  * quote post
-  * code 
-  * add security
-* display post 
-* display posts 
+* add security
+* only display published 
+* add crud 
+  * create
+  * edit 
+  * delete 
 * make layout pretty 
 * add about me
 * add tags 
-
-
+* add other posts types
+  * quote post
+  * link post 
+  * code 
 
 
 

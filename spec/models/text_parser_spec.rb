@@ -3,6 +3,19 @@ require 'spec_helper'
 
 describe TextParser do
   
+  context "null" do
+    Given(:markdown) { nil }
+    When(:html) {TextParser.new(markdown).to_html }
+    Then { html.strip.should == "" } 
+  end
+
+
+  context "empty string" do
+    Given(:markdown) { "" }
+    When(:html) {TextParser.new(markdown).to_html }
+    Then { html.strip.should == "" } 
+  end
+  
   context "basic markdown" do
     Given(:markdown) { """
 # header 1 

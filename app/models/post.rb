@@ -16,27 +16,16 @@ class Post < ActiveRecord::Base
     publish_me(false)
   end
 
-  def slugify(raw_text)
-    return unless raw_text
-    raw_text.gsub(/[^\w\/]|[!\(\)\.|\/]+/, ' '). # concert special chars to spaces 
-             strip. # remove trailing spaces 
-             downcase. # fix case
-             gsub(/\ +/, '-') # concert groups of spaces to dashes
-  end
 
-  def markupify(markdown_text) 
-    return unless markdown_text
-    TextParser.new(markdown_text).to_html
-  end
 
   private 
   
   def update_html
-    self.body_html = markupify(self.body) 
+    self.body_html = TextParser.new(self.body).to_html
   end
 
   def update_slug 
-    self.slug = slugify(self.title)
+    self.slug = Slugify.new(self.title).compute
   end
 
   def publish_me(raise_exceptions)
