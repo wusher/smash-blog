@@ -5,7 +5,7 @@ describe Post do
 
   describe "#publish" do
     Given { post.title = "has a title" }
-    context "publish sucesseds" do
+    context "publish succeeds" do
       When(:is_published) { post.publish }
       Then { is_published.should be_true}
       Then { post.published?.should be_true}
@@ -24,6 +24,20 @@ describe Post do
         Then  { is_published.should be_false }
       end
     end
+  end
+
+  describe "#publish!" do
+    context "publish succeeds" do
+      Given { post.stub(:publish).and_return(true) }
+      When(:is_published) { post.publish! }
+      Then { is_published.should be_true}
+    end
+    context "publish fails" do
+      Given { post.stub(:publish).and_return(false) }
+      When(:result) { post.publish! }
+      Then { result.should have_failed(ActiveRecord::RecordInvalid,//)}
+    end
+
   end
 
   describe "#save" do
