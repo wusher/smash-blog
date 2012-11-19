@@ -15,6 +15,7 @@ end
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'skeleton-rails'
 
 gem "redcarpet", "~> 2.1.1"
 gem "coderay", "~> 1.0.8"

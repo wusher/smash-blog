@@ -5,7 +5,15 @@
   = javascript_include_tag "application" 
   = csrf_meta_tags 
 %body
-  .notice= notice
-  .alert= alert
-  = yield
+  %header.full-row
+    .left
+      %h1 william smash!
+    .right.nav
+      %a{ :href => "#" } about
+      %a{ :href => "#" } archives
+    %br.clear
+  .container
+    .notice= notice
+    .alert= alert
+    = yield
 

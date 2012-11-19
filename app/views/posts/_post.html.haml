@@ -1,1 +1,9 @@
-= post.to_json
+.post.sixteen.columns
+  .row
+    .two.columns.info.alpha
+      .title
+        %a{ :href => "posts/#{post.slug}" }
+          %strong= post.title
+      .pubdate
+        %strong= post.pubdate.strftime("%y%m%d")
+    .fourteen.columns.omega.body!= post.body_html

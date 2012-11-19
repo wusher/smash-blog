@@ -4,6 +4,6 @@ Smash::Application.routes.draw do
 
   resources :posts
 
-  root :to => 'home#index'
+  root :to => 'posts#index'
 
 end
