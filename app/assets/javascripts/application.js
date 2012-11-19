@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require tabs
+//= require turbolinks
 //= require_tree .
