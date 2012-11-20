@@ -21,6 +21,9 @@ gem 'turbolinks'
 gem "redcarpet", "~> 2.1.1"
 gem "coderay", "~> 1.0.8"
 
+gem 'rack-mini-profiler'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
