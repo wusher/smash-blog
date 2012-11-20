@@ -19,6 +19,4 @@ class PostsController < ApplicationController
     @post = Post.find_by_slug(params[:id])
     raise ActiveRecord::RecordNotFound unless @post
   end
-
-
 end

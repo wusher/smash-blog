@@ -12,8 +12,8 @@
 # create basic post views
 # # index 
 # # details 
-* add about me
-* make layout pretty 
+# add about me
+# make layout pretty 
 * add pagination and an overview 
 * only display published 
 * create a post:

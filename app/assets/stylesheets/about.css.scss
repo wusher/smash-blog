@@ -23,8 +23,15 @@ ul.links li {
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.75s;
   -webkit-transition-timing-function: ease-out;
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -moz-transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
 }
 
 .links a:hover { 
   background-color: #ccc;
+  color: #335;
 }
