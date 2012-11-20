@@ -17,7 +17,7 @@
   %header.full-row
     .left
       %h1 
-        %a{ :href => "/" }  william smash!
+        = link_to "wusher", root_path
     .right.nav
       \~
       = link_to "about me", about_me_path
@@ -29,4 +29,3 @@
     .notice= notice
     .alert= alert
     = yield
-
