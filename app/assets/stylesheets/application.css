@@ -16,10 +16,14 @@
 
 
 body {
-  font-family: serif;
+  font-family: "linden-hill", sans-serif;
   margin: 0px;
   color: #334;
   background-color: #ffffff;
+}
+
+code {
+  font-family: "ubuntu-mono", monospace;
 }
 
 .full-row {
@@ -31,12 +35,21 @@ header {
   box-shadow: 0px 0px 555px #222 inset;
   float:right;
 }
+article header { 
+  box-shadow: none;
+  float:none;
+}
 
 
 
 h1 {
   font-size: 11pt;
   font-weight:normal;
+}
+
+h1 a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .left { 
@@ -47,14 +60,15 @@ h1 {
 }
 
 .nav {
-  margin-top: 08px;
   padding: 0px 15px;
   font-size: 11pt;
 }
 
 .nav a {
+  padding: 9px 0;
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 .nav ul {
   padding: 9px;
@@ -64,36 +78,27 @@ h1 {
 
 
 .post {
-  font-size: 13.5pt;
+  font-size: 14pt;
   padding: 15px;
   margin-bottom: 40px;
   margin-top: 20px;
 }
 
 .post .title a { 
-  font-size: 13pt; 
+  font-size: 14pt; 
   text-decoration:none;
   color: inherit; 
+  display: block;
 }
 .post .pubdate {
-  font-size: 13pt; 
+  font-size: 14pt; 
 }
 
 .post .info {
   padding-bottom: 10px;
-  padding-top: 15px;
-
+  padding-top: 19px;
+  text-align: center; 
 }
-
-
 .post .info .pubdate{
+  font-style: italic;
 }
-@media only screen and (max-width: 767px) {
-  .post .info, .post .info .pubdate {
-    text-align: center; 
-  }
-
-}
-
-
-
