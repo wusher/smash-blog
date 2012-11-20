@@ -1,0 +1,30 @@
+// Place all the styles related to the about controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.info {
+  font-size: 20pt;
+}
+ul.links {
+  list-style-type: none;
+}
+
+ul.links li {
+}
+
+.links a {
+  color: inherit;
+  font-size: 20pt;
+  display: inline-block; 
+  padding: 8px;
+  margin: 8px;
+  min-width: 150px;
+  text-align: center;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+}
+
+.links a:hover { 
+  background-color: #ccc;
+}
