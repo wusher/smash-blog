@@ -12,16 +12,17 @@
 # create basic post views
 # # index 
 # # details 
+* add about me
+* make layout pretty 
+* add pagination and an overview 
+* only display published 
 * create a post:
   * normal post
 * add security
-* only display published 
 * add crud 
   * create
   * edit 
   * delete 
-* make layout pretty 
-* add about me
 * add tags 
 * add other posts types
   * quote post
