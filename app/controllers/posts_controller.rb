@@ -3,9 +3,12 @@ class PostsController < ApplicationController
 
   before_filter :load_post, :only => [:show]
 
-
   def index
-    @posts = Post.all
+    if current_admin.present?
+      @posts = Post.all
+    else
+      @posts = Post.published
+    end
     respond_with @posts
   end
 

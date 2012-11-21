@@ -3,6 +3,32 @@ require 'spec_helper'
 describe Post do
   Given(:post)  { Post.new title: "title"  }
 
+  describe "#default_scope" do
+    Given!(:last_and_oldest)  { Post.create!(pubdate: 2.months.ago) }
+    Given!(:first_and_newest) { Post.create!(pubdate: 1.months.ago) }
+    When(:found_posts) { Post.all }
+    Then { found_posts.first.should == first_and_newest }
+    Then { found_posts.last.should  == last_and_oldest }
+    context "nonpublished post exists" do
+      Given!(:nonpublished) { Post.create! }
+      When(:found_posts) { Post.all }
+      Then { found_posts.first.should == nonpublished }
+      Then { found_posts.last.should  == last_and_oldest }
+    end
+  end
+
+  describe "#published" do
+    Given!(:published) { Post.create! published: true, title: "stuff", pubdate: Time.now  }
+    Given!(:nonpublished) { Post.create! published: false }
+    When(:posts) { Post.published }
+    Then { posts.count.should == 1 }
+    Then { posts.first == published }
+  end
+  
+  describe "#recent" do 
+
+  end
+
   describe "#publish" do
     Given { post.title = "has a title" }
     context "publish succeeds" do

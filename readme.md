@@ -14,11 +14,11 @@
 # # details 
 # add about me
 # make layout pretty 
-* add pagination and an overview 
-* only display published 
+# only display published 
 * create a post:
   * normal post
 * add security
+* add pagination and an overview 
 * add crud 
   * create
   * edit 
