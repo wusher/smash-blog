@@ -45,7 +45,7 @@ header {
   float:right;
   position: relative;
   z-index: 10;
-  box-shadow: -1px 1px 5px #222;
+  box-shadow: -2px 2px 9px #222;
 }
 
 
@@ -57,10 +57,10 @@ header {
 }
 
 .nav {
-  width: 250px;
-  font-size: 18pt;
+  max-width: 250px;
+  font-size: 14pt;
   color: #ccc;
-  box-shadow: 0px 0px 145px #222 inset;
+  box-shadow: 0px 0px 185px #222 inset;
   padding: 0 15px;
 }
 
@@ -69,6 +69,19 @@ header {
   text-decoration: none;
   color: inherit;
   display: inline-block;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.75s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.75s;
+  -moz-transition-timing-function: ease-out;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-out;
+}
+.nav a:hover { 
+  color: #aac;
+  text-shadow: 0px 0px 25px #eef;
 }
 .nav h1 {
   font-size: inherit;
@@ -85,10 +98,11 @@ header {
 
 .post {
   font-size: 18pt;
-  padding: 15px;
+  padding: 0px;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
+
 
 .post .title a { 
   font-size: 22pt; 
