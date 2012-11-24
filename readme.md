@@ -15,7 +15,7 @@
 # add about me
 # make layout pretty 
 # only display published 
-* add sitemap
+# add sitemap
 * create a post:
   * normal post
   * edit 

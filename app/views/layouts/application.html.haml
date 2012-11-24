@@ -14,18 +14,15 @@
     })();
 
 %body
-  %header.full-row
-    .left
-      %h1 
-        = link_to "wusher", root_path
-    .right.nav
-      \~
-      = link_to "about me", about_me_path
-      \~
-      -#%a{ :href => "#" } archives
-      -#\~
-    %br.clear
-  .container.body
-    .notice= notice
-    .alert= alert
-    = yield
+  .everything
+    %header.full-row
+      .nav
+        %h1 
+          = link_to "wusher", root_path
+        \~
+        = link_to "about me", about_me_path
+        \~
+    .container.body
+      .notice= notice
+      .alert= alert
+      = yield

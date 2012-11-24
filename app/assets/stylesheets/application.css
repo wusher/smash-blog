@@ -19,6 +19,7 @@ body {
   font-family: "linden-hill", serif;
   margin: 0px;
   color: #334;
+  box-shadow: 0px 0px 5px #222 inset;
 }
 
 code {
@@ -30,18 +31,7 @@ code {
   font-size: 11pt;
 }
 
-.full-row {
-  padding: 0px 30px;
-  color: #aaa;
-}
 
-header {
-  box-shadow: 0px 0px 555px #222 inset;
-  float:right;
-  position: relative;
-  z-index: 10;
-  border-radius: 0 0 0 20px;
-}
 article header { 
   box-shadow: none;
   float:none;
@@ -52,16 +42,14 @@ article header {
 }
 
 
-
-h1 {
-  font-size: 11pt;
-  font-weight:normal;
+header {
+  float:right;
+  position: relative;
+  z-index: 10;
+  border-radius: 0 0 0 00px;
+  box-shadow: -1px 1px 5px #222;
 }
 
-h1 a {
-  text-decoration: none;
-  color: inherit;
-}
 
 .left { 
   float: left;
@@ -71,8 +59,11 @@ h1 a {
 }
 
 .nav {
-  padding: 0px 15px;
+  width: 100%;
   font-size: 11pt;
+  color: #aaa;
+  box-shadow: 0px 0px 145px #222 inset;
+  padding: 0 15px;
 }
 
 .nav a {
@@ -81,10 +72,16 @@ h1 a {
   color: inherit;
   display: inline-block;
 }
-.nav ul {
-  padding: 9px;
-  margin: 0px;
-  list-style-type: none;
+.nav h1 {
+  font-size: 11pt;
+  font-weight:normal;
+  display: inline-block;
+  margin: 0;
+}
+
+.nav h1 a {
+  text-decoration: none;
+  color: inherit;
 }
 
 
