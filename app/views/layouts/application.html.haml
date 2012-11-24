@@ -14,15 +14,15 @@
     })();
 
 %body
-  .everything
-    %header.full-row
-      .nav
-        %h1 
-          = link_to "wusher", root_path
-        \~
-        = link_to "about me", about_me_path
-        \~
-    .container.body
-      .notice= notice
-      .alert= alert
-      = yield
+  %header
+    .nav
+      \~
+      %h1 
+        = link_to "wusher", root_path
+      \~
+      = link_to "about me", about_me_path
+      \~
+  .container.body
+    .notice= notice
+    .alert= alert
+    = yield
