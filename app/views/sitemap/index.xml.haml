@@ -1,0 +1,17 @@
+%urlset{ xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  %url
+    %loc= about_me_url
+    %lastmod= @posts.last.updated_at
+    %changefreq monthly
+    %priority 0.9
+  %url
+    %loc= root_url
+    %lastmod= @posts.first.updated_at
+    %changefreq weekly
+    %priority 0.8
+  - @posts.each do |post|
+    %url
+      %loc= post_url(post.slug)
+      %lastmod= post.updated_at
+      %changefreq monthly
+      %priority 0.5

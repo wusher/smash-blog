@@ -15,14 +15,13 @@
 # add about me
 # make layout pretty 
 # only display published 
+* add sitemap
 * create a post:
   * normal post
-* add security
-* add pagination and an overview 
-* add crud 
-  * create
   * edit 
   * delete 
+  * add security
+* add pagination and an overview 
 * add tags 
 * add other posts types
   * quote post
