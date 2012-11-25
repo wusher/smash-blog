@@ -23,6 +23,8 @@ gem "coderay", "~> 1.0.8"
 
 gem 'rack-mini-profiler'
 
+gem 'newrelic_rpm'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
