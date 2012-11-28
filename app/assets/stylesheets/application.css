@@ -45,9 +45,14 @@ header {
   float:right;
   position: relative;
   z-index: 10;
-  box-shadow: -2px 2px 9px #222;
+  /*box-shadow: -2px 2px 9px #222;*/
 }
 
+header.nav {
+  position: absolute;
+  right: 0px;
+  background-color: #fff;
+}
 
 .left { 
   float: left;
@@ -57,18 +62,20 @@ header {
 }
 
 .nav {
-  max-width: 250px;
+  width: 200px;
   font-size: 14pt;
-  color: #ccc;
-  box-shadow: 0px 0px 185px #222 inset;
-  padding: 0 15px;
+  border-left: solid thin #aaa;
+  border-bottom: solid thin #aaa;
+  text-align: center;
 }
 
 .nav a {
-  padding: 9px 0;
+  background-color: transparent;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
   text-decoration: none;
   color: inherit;
-  display: inline-block;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.75s;
   -webkit-transition-timing-function: ease-out;
@@ -79,15 +86,31 @@ header {
   transition-duration: 0.75s;
   transition-timing-function: ease-out;
 }
+
+.nav ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  /*-webkit-margin-before: 0em;*/
+  /*-webkit-margin-after: 0em;*/
+  /*-webkit-margin-start: 0px;*/
+  /*-webkit-margin-end: 0px;*/
+  /*-webkit-padding-start: 0px;*/
+}
+.nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
 .nav a:hover { 
-  color: #aac;
-  text-shadow: 0px 0px 25px #eef;
+  background-color: #ccc;
+  color: #335;
 }
 .nav h1 {
-  font-size: inherit;
+  font-size: 24pt;
   font-weight:normal;
-  display: inline-block;
   margin: 0;
+  border-bottom: solid thin #aaa;
 }
 
 .nav h1 a {

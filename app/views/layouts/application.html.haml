@@ -16,14 +16,13 @@
     })();
 
 %body
-  %header
-    .nav
-      \~
-      %h1 
-        = link_to "wusher", root_path
-      \~
-      = link_to "about me", about_me_path
-      \~
+  %header.nav
+    %h1 
+      = link_to "wusher", root_path
+    %nav
+      %ul
+        %li= link_to "~ about me ~", about_me_path
+        %li= link_to "~ archives ~", about_me_path
   .container.body
     .notice= notice
     .alert= alert
