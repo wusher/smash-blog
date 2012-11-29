@@ -1,9 +1,9 @@
 %article.post.sixteen.columns
   .row
-    %header.two.columns.info.alpha
+    %header.three.columns.info.alpha
       .title
         =link_to post.title, post_path(post.slug)
       %timedate.pubdate{ pubdate: "pubdate"}= post.pubdate.present? && post.pubdate.strftime("%m/%d/%y")
-    .two.columns.omega
-    .twelve.columns.omega.body!= post.body_html
+    .three.columns.omega
+    .ten.columns.omega.body!= post.body_html
     

@@ -37,7 +37,8 @@ article header {
 }
 
 .container.body { 
-  padding-top: 1px;
+  padding-top: 45px;
+  
 }
 
 
@@ -63,7 +64,7 @@ header.nav {
 
 .nav {
   width: 200px;
-  font-size: 14pt;
+  font-size: 11pt;
   border-left: solid thin #aaa;
   border-bottom: solid thin #aaa;
   text-align: center;
@@ -107,7 +108,7 @@ header.nav {
   color: #335;
 }
 .nav h1 {
-  font-size: 24pt;
+  font-size: 18pt;
   font-weight:normal;
   margin: 0;
   border-bottom: solid thin #aaa;
@@ -120,20 +121,24 @@ header.nav {
 
 
 .post {
-  font-size: 18pt;
+  font-size: 13pt;
   padding: 0px;
   margin-bottom: 40px;
   margin-top: 0px;
 }
 
+.body p:first-child {
+  margin-top: 10px;
+}
+
 
 .post .title a { 
-  font-size: 22pt; 
+  font-size: 18pt; 
   font-weight: bold;
   text-decoration:none;
   color: inherit; 
   display: block;
-  padding: 6px 2px;
+  padding: 5px;
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.75s;
   -webkit-transition-timing-function: ease-out;
@@ -151,16 +156,27 @@ header.nav {
 }
 
 .post .pubdate {
-  font-size: 14pt; 
+  padding-top: 5px;
+  font-size: 11pt; 
 }
 
 .post .info {
   padding-bottom: 10px;
-  padding-top: 13px;
+  margin-top: 13px;
   text-align: center; 
+  border-top: solid thin #aaa;
+  border-bottom: solid thin #aaa;
+  border-left: solid 1px #aaa;
+  -webkit-transition-property: box-shadow;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
 }
+.post .info:hover {
+}
+
 .post .info .pubdate{
   font-style: italic;
+  border-top: solid thin #aaa;
 }
 
 .post .body a {
@@ -187,11 +203,33 @@ header.nav {
   color: #335;
 }
 
+
+@media only screen and (max-width: 767px) {
+  header.nav {
+    width: 100%;
+    position: static;
+    float: none;
+    right: 0px;
+    border: none;
+  }
+  .post .info {
+    border-left: none;
+  }
+  
+}
+
+
 .CodeRay {
   background-color: #FFF;
   padding: 1em 0px 1em 1em;
-  font-size: 13pt;
-  box-shadow: 0px 0px 25px #eeeeee inset;
+  font-size: 11pt;
+  box-shadow: -0px 0px 9px #eee inset;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.25s;
+  -webkit-transition-timing-function: linear;
+}
+.CodeRay:hover {
+  box-shadow: -3px 0px 300px #dde inset;
 }
 
 .CodeRay pre {
