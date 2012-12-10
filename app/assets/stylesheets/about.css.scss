@@ -1,6 +1,7 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
 
 .info {
   font-size: 20pt;
@@ -33,6 +34,6 @@ ul.links li {
 }
 
 .links a:hover { 
-  background-color: #ccc;
-  color: #335;
+  background-color: $hover_color;
+  color: $primary_color;
 }

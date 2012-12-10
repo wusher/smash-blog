@@ -1,0 +1,51 @@
+@import "colors";
+
+body {
+  font-family: "linden-hill", serif;
+  background-color: $light_color;
+  margin: 0px;
+  color: $dark_color;
+}
+.container.body { 
+  padding-top: 45px;
+}
+
+.liner { 
+  .dark {
+    float:right;
+    width:30px;
+  }
+  .line_one { 
+    height: 13px;
+    background-color: $light_color;
+    .dark { 
+      background-color: darken($light_color, 5%);
+      height: 13px;
+    }
+  }
+  .line_two { 
+    height: 21px;
+    background-color: $primary_color;
+    .dark { 
+      background-color: darken($primary_color, 5%);
+      height: 21px;
+    }
+  }
+  .line_three { 
+    height: 5px;
+    background-color: $secondary_color_bright;
+    .dark { 
+      background-color: darken($secondary_color_bright, 5%);
+      height: 5px;
+    }
+  }
+  .line_four { 
+    height: 8px;
+    background-color: $secondary_color_dark;
+    .dark { 
+      background-color: darken($secondary_color_dark, 5%);
+      height: 8px;
+    }
+  }
+
+}
