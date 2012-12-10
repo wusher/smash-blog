@@ -33,13 +33,10 @@ describe PostsController do
       Then { response.should render_template(:show) }
       Then { assigns(:post).should == target_post }
     end
-
     context "post not found" do
       Given { Post.stub(:find_by_slug).and_return(nil) }
       When(:result) { get :show, id: "anything" }
       Then { result.should have_failed(ActiveRecord::RecordNotFound, //) }
     end
   end
-
-
 end

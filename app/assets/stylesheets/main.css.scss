@@ -3,6 +3,7 @@
 body {
   font-family: "linden-hill", serif;
   background-color: $light_color;
+  background-image: url('background.png');
   margin: 0px;
   color: $dark_color;
 }
@@ -10,16 +11,19 @@ body {
   padding-top: 45px;
 }
 
+
+$darken_amount: 7%;
+
 .liner { 
   .dark {
-    float:right;
-    width:30px;
+    float:left;
+    width:15%;
   }
   .line_one { 
     height: 13px;
     background-color: $light_color;
     .dark { 
-      background-color: darken($light_color, 5%);
+      background-color: darken($light_color, $darken_amount);
       height: 13px;
     }
   }
@@ -27,7 +31,7 @@ body {
     height: 21px;
     background-color: $primary_color;
     .dark { 
-      background-color: darken($primary_color, 5%);
+      background-color: darken($primary_color, $darken_amount);
       height: 21px;
     }
   }
@@ -35,7 +39,7 @@ body {
     height: 5px;
     background-color: $secondary_color_bright;
     .dark { 
-      background-color: darken($secondary_color_bright, 5%);
+      background-color: darken($secondary_color_bright, $darken_amount);
       height: 5px;
     }
   }
@@ -43,7 +47,7 @@ body {
     height: 8px;
     background-color: $secondary_color_dark;
     .dark { 
-      background-color: darken($secondary_color_dark, 5%);
+      background-color: darken($secondary_color_dark, $darken_amount);
       height: 8px;
     }
   }
