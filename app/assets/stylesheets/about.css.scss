@@ -7,33 +7,31 @@
   font-size: 20pt;
   text-align: center;
 }
+
 ul.links {
   list-style-type: none;
+  a {
+    color: inherit;
+    display: inline-block; 
+    font-size: 20pt;
+    font-style: italic;
+    padding: 20px;
+    text-align: center;
+    min-width: 250px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.75s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.75s;
+    -moz-transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out;
+    &:hover {
+      background-color: $hover_color;
+      color: $primary_color;
+    }
+  }
 }
 
-ul.links li {
-}
 
-.links a {
-  color: inherit;
-  font-size: 20pt;
-  display: inline-block; 
-  padding: 8px;
-  margin: 8px;
-  min-width: 150px;
-  text-align: center;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.75s;
-  -webkit-transition-timing-function: ease-out;
-  -moz-transition-property: all;
-  -moz-transition-duration: 0.75s;
-  -moz-transition-timing-function: ease-out;
-  transition-property: all;
-  transition-duration: 0.75s;
-  transition-timing-function: ease-out;
-}
-
-.links a:hover { 
-  background-color: $hover_color;
-  color: $primary_color;
-}

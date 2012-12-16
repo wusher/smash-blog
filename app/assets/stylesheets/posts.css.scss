@@ -42,6 +42,12 @@ article header {
         -webkit-transition-property: all;
         -webkit-transition-duration: 0.75s;
         -webkit-transition-timing-function: ease-out;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.75s;
+        -moz-transition-timing-function: ease-out;
+        transition-property: all;
+        transition-duration: 0.75s;
+        transition-timing-function: ease-out;
         &:hover { 
           background-color: $hover_color;
           color: $primary_color;
@@ -58,6 +64,12 @@ article header {
       -webkit-transition-property: all;
       -webkit-transition-duration: 0.75s;
       -webkit-transition-timing-function: ease;
+      -moz-transition-property: all;
+      -moz-transition-duration: 0.75s;
+      -moz-transition-timing-function: ease-out;
+      transition-property: all;
+      transition-duration: 0.75s;
+      transition-timing-function: ease-out;
       &:visited {
         color: $dark_color;
       }

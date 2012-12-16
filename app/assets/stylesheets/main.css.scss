@@ -24,18 +24,22 @@
 
 
 body {
-  font-family:  "fanwood", serif;
   background-color: $light_color;
   background-image: url('background.png');
-  margin: 0px;
   color: $dark_color;
+  font-family:  "fanwood", serif;
+  margin: 0px;
 }
+
 .container.body { 
-  padding-top: 45px;
+  padding-top: 35px;
+}
+@media only screen and (max-width: 767px) {
+  .container.body { 
+    padding-top: 0px;
+  }
 }
 
-
-$darken_amount: 7%;
 
 .liner { 
   .dark {
@@ -43,36 +47,35 @@ $darken_amount: 7%;
     width:15%;
   }
   .line_one { 
-    height: 13px;
     background-color: $light_color;
+    height: 13px;
     .dark { 
-      background-color: darken($light_color, $darken_amount);
       height: 13px;
+      background-color: darken($light_color, $darken_amount);
     }
   }
   .line_two { 
-    height: 21px;
     background-color: $primary_color;
+    height: 21px;
     .dark { 
-      background-color: darken($primary_color, $darken_amount);
       height: 21px;
+      background-color: darken($primary_color, $darken_amount);
     }
   }
   .line_three { 
-    height: 5px;
     background-color: $secondary_color_bright;
+    height: 5px;
     .dark { 
-      background-color: darken($secondary_color_bright, $darken_amount);
       height: 5px;
+      background-color: darken($secondary_color_bright, $darken_amount);
     }
   }
   .line_four { 
-    height: 8px;
     background-color: $secondary_color_dark;
+    height: 8px;
     .dark { 
-      background-color: darken($secondary_color_dark, $darken_amount);
       height: 8px;
+      background-color: darken($secondary_color_dark, $darken_amount);
     }
   }
-
 }

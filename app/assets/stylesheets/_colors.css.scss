@@ -28,13 +28,6 @@
 /*$secondary_color_dark: #424254;*/
 /*$light_color: lighten($light_color, 15%);*/
 
-/*http://www.colourlovers.com/palette/41095/leatherbound*/
-$light_color: #F5F4D7;
-$dark_color: #535233;
-$primary_color: #951F2B;
-$secondary_color_bright: #E0DFB1;
-$secondary_color_dark: #A5A36C;
-
 /*http://www.colourlovers.com/palette/2539250/Alice_In_Wonderland*/
 /*$light_color: #FEFFD6;*/
 /*$dark_color: #010002;*/
@@ -63,8 +56,14 @@ $secondary_color_dark: #A5A36C;
 /*$secondary_color_bright: #FE8D4F;*/
 /*$secondary_color_dark: #F60861;*/
 
+/*http://www.colourlovers.com/palette/41095/leatherbound*/
+$light_color: #F5F4D7;
+$dark_color: #535233;
+$primary_color: #951F2B;
+$secondary_color_bright: #E0DFB1;
+$secondary_color_dark: #A5A36C;
 
-
+$darken_amount: 7%;
 $light_color: lighten($light_color, 5%);
 $border_color: $secondary_color_dark;
 $hover_color: $secondary_color_bright;
