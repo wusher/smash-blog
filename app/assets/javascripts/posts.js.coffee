@@ -21,7 +21,7 @@ $(->
         bodyPreview.html(newMarkdown)
       })
 
-  updatePreview = _.debounce(updatePreview, 300)
+  updatePreview = _.debounce(updatePreview, 1000)
 
   postBody.on("keypress", ->
     updatePreview()
