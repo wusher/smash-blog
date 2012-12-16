@@ -1,7 +1,30 @@
 @import "colors";
 
+@font-face {
+  font-family: "fanwood";
+  src: url("fanwood_text-webfont.ttf");
+}
+@font-face {
+  font-family: "fanwood";
+  src: url("fanwood_text_italic-webfont.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ubuntu-mono";
+  src: url("UbuntuMono-R.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ubuntu-mono";
+  src: url("UbuntuMono-B.ttf") format("truetype");
+  font-weight: bold;
+}
+
+
 body {
-  font-family: "linden-hill", serif;
+  font-family:  "fanwood", serif;
   background-color: $light_color;
   background-image: url('background.png');
   margin: 0px;
