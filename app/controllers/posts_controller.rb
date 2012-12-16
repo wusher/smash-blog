@@ -2,6 +2,12 @@ class PostsController < ApplicationController
   respond_to :html, :json
 
   before_filter :load_post, :only => [:show]
+  before_filter :authenticate_admin!, :only => [:new ]
+
+  def new
+    @post = Post.new
+    respond_with @post
+  end
 
   def index
     if current_admin.present?

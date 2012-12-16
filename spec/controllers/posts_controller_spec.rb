@@ -1,7 +1,23 @@
 require 'spec_helper'
 
-
 describe PostsController do
+  describe "#new" do
+    context "admin is logged in" do
+      Given { subject.stub(:authenticate_admin!).and_return(true) }
+      When { get :new }
+      Then { response.code.should == "200" }
+      Then { response.should render_template(:new) }
+      Then { assigns(:post).should be_present }
+    end
+    context "no one is logged in" do
+      Given { subject.stub(:current_admin).and_return(nil) }
+      When { get :new }
+      Then { response.code.should == "302" }
+    end
+  end
+  describe "#create" do
+
+  end
   describe "#index" do
     context "admin is logged in" do
       Given(:all_posts) { [ stub_model(Post), stub_model(Post)] } 

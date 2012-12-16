@@ -17,7 +17,7 @@
 # only display published 
 # add sitemap
 * create a post:
-  * normal post
+  ~ normal post
   * edit 
   * delete 
   * add security

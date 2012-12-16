@@ -1,0 +1,5 @@
+- content_for :page_title do
+  = "Make a new post"
+
+= form_for @post do |f|
+  = render :partial => 'form', locals: { post: @post, form: f }

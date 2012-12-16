@@ -1,0 +1,22 @@
+.row
+  .eight.columns
+    .row
+      = form.label :title
+      = form.text_field :title
+    .row
+      = form.label :pubdate
+      = form.text_field :pubdate, class: "datepicker"
+  .eight.columns
+    .row
+      %label &nbsp;
+      %button{ :type => "submit" } Save Post
+    .row
+      %label &nbsp;
+      %button{ :type => "submit" } Publish Post
+.row
+  .eight.columns
+    = form.label :body
+    = form.text_area :body
+  .eight.columns
+    .label Preview
+    #preview

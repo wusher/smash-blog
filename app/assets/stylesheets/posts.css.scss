@@ -84,6 +84,36 @@ article header {
   }
 }
 
+/* input forms */
+.new_post {
+  label, .label {
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  input, button { 
+    border: 1px solid $border_color;
+    display: block;
+    font-family: "fanwood";
+    font-size: 14pt;
+    padding: 5px 2px;
+    width: 97%;
+  }
+  textarea {
+    border: 1px solid $border_color;
+    font-family: "fanwood";
+    font-size: 14pt;
+    padding: 5px 2px;
+    width: 97%;
+  }
+  #preview { 
+    border: 1px solid $border_color;
+    padding: 10px;
+
+  
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .post .info {
     border-left: none;
