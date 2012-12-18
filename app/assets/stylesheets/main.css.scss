@@ -2,23 +2,23 @@
 
 @font-face {
   font-family: "fanwood";
-  src: url("fanwood_text-webfont.ttf");
+  src: url("fanwood_text-webfont.woff");
 }
 @font-face {
   font-family: "fanwood";
-  src: url("fanwood_text_italic-webfont.ttf");
+  src: url("fanwood_text_italic-webfont.woff");
   font-style: italic;
 }
 
 @font-face {
   font-family: "ubuntu-mono";
-  src: url("UbuntuMono-R.ttf") format("truetype");
+  src: url("ubuntu-mono.woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "ubuntu-mono";
-  src: url("UbuntuMono-B.ttf") format("truetype");
+  src: url("UbuntuMono-B.ttf");
   font-weight: bold;
 }
 
