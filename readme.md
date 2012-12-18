@@ -21,6 +21,7 @@
   * edit 
   * delete 
   * add security
+  * add better error handling
 * add pagination and an overview 
 * add tags 
 * add other posts types

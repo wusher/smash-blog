@@ -9,10 +9,11 @@
   .eight.columns
     .row
       %label &nbsp;
-      %button{ :type => "submit" } Save Post
+      %button.confirm_save_post{ :type => "submit" } Save Post
     .row
       %label &nbsp;
-      %button{ :type => "submit" } Publish Post
+      %button#publish_post.confirm_save_post Publish Post
+      %input#publish{ type: :hidden, name: "publish", value: post.published?.to_s}
 .row
   .eight.columns
     = form.label :body

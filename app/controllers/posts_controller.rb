@@ -2,11 +2,19 @@ class PostsController < ApplicationController
   respond_to :html, :json
 
   before_filter :load_post, :only => [:show]
-  before_filter :authenticate_admin!, :only => [:new ]
+  before_filter :authenticate_admin!, :only => [:new, :create ]
 
   def new
     @post = Post.new
     respond_with @post
+  end
+
+  def create
+    @post = Post.create params[:post]
+    if params[:publish] == "true"
+      @post.publish
+    end
+    respond_with  @post
   end
 
   def index
@@ -26,6 +34,9 @@ class PostsController < ApplicationController
 
   def load_post
     @post = Post.find_by_slug(params[:id])
+    if @post.nil? && current_admin.present? && params[:id].to_i > 0
+      @post = Post.find params[:id]
+    end
     raise ActiveRecord::RecordNotFound unless @post
   end
 end

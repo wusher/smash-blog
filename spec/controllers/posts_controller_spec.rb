@@ -16,7 +16,19 @@ describe PostsController do
     end
   end
   describe "#create" do
-
+    context "admin is logged in" do
+      Given { subject.stub(:authenticate_admin!).and_return(true) }
+      context "valid post" do
+        Given(:valid_post) { { body: "valid", title: "valid title"} }
+        When { post :create, post: valid_post }
+        Then { response.should redirect_to(post_path(assigns(:post).id)) }
+      end
+    end
+    context "no one is logged in" do
+      Given { subject.stub(:current_admin).and_return(nil) }
+      When { post :create }
+      Then { response.code.should == "302" }
+    end
   end
   describe "#index" do
     context "admin is logged in" do
@@ -40,19 +52,38 @@ describe PostsController do
   end
 
   describe "#show" do
-    context "post exists" do
+    context "find by id" do
+      Given(:id) { "9" }
+      Given(:target_post) { stub_model(Post, {id: id} )}
+      Given { Post.stub(:find_by_slug).with(any_args()).and_return(nil) }
+      Given { Post.stub(:find).with(id).and_return(target_post) }
+      context "admin is logged in" do
+        Given { subject.stub(:current_admin).and_return(stub_model(Admin)) }
+        When { get :show, id: id }
+        Then { response.should be_successful }
+        Then { response.should render_template(:show) }
+        Then { assigns(:post).should == target_post }
+      end
+      context "no one is logged in" do
+        When(:result) { get :show, id: id }
+        Then { result.should have_failed(ActiveRecord::RecordNotFound, //) }
+      end
+    end
+    context "find by slug" do
       Given(:slug) { "my-title" }
       Given(:target_post) { stub_model(Post, slug: slug) }
-      Given { Post.stub(:find_by_slug).and_return(target_post) }
-      When { get :show, id: target_post.slug }
-      Then { response.code.should == "200" }
-      Then { response.should render_template(:show) }
-      Then { assigns(:post).should == target_post }
-    end
-    context "post not found" do
-      Given { Post.stub(:find_by_slug).and_return(nil) }
-      When(:result) { get :show, id: "anything" }
-      Then { result.should have_failed(ActiveRecord::RecordNotFound, //) }
+      context "post fond" do
+        Given { Post.stub(:find_by_slug).and_return(target_post) }
+        When { get :show, id: slug }
+        Then { response.should be_successful }
+        Then { response.should render_template(:show) }
+        Then { assigns(:post).should == target_post }
+      end
+      context "post not found" do
+        Given { Post.stub(:find_by_slug).with(any_args()).and_return(nil) }
+        When(:result) { get :show, id: slug }
+        Then { result.should have_failed(ActiveRecord::RecordNotFound, //) }
+      end
     end
   end
 end
