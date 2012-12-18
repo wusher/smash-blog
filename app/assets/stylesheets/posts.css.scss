@@ -54,6 +54,35 @@ article header {
         }
       }
     }
+    ul.admin_nav {
+      border-top: solid 3px $border_color;
+      font-size: 11pt;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li { margin: 0; padding: 0; }
+      a {
+        background-color: transparent;
+        color: inherit;
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        width: 100%;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.75s;
+        -webkit-transition-timing-function: ease-out;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.75s;
+        -moz-transition-timing-function: ease-out;
+        transition-property: all;
+        transition-duration: 0.75s;
+        transition-timing-function: ease-out;
+        &:hover { 
+          background-color: $hover_color;
+          color: $primary_color;
+        }
+      } 
+    }
   }
 
   .post-body {

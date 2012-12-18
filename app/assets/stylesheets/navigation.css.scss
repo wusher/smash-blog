@@ -23,14 +23,11 @@ header.nav {
   }
 
   ul {
+    font-size: 11pt;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    li {
-      font-size: 11pt;
-      margin: 0;
-      padding: 0;
-    }
+    li { margin: 0; padding: 0; }
   }
 
   a {

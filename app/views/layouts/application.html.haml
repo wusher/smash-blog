@@ -21,10 +21,7 @@
   %header.nav
     %h1 
       = link_to "wusher", root_path
-    %nav
-      %ul
-        %li= link_to "~ about me ~", about_me_path
-        %li= link_to "~ archives ~", about_me_path
+    = render partial: "layouts/navigation"
   .container.body
     .notice= notice
     .alert= alert
