@@ -1,8 +1,13 @@
 class PostsController < ApplicationController
   respond_to :html, :json
 
-  before_filter :load_post, :only => [:show, :edit, :update]
-  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update]
+  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
+  before_filter :load_post, :only => [:show, :edit, :update, :destroy]
+
+  def destroy
+    @post.destroy
+    respond_with @post
+  end
 
   def edit
     respond_with @post

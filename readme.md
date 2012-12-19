@@ -19,8 +19,8 @@
 * create a post:
   # normal post
   # add admin nav
-  ~ edit 
-  * delete 
+  # edit 
+  ~ delete 
   * add security
   * add better error handling
 * add pagination and an overview 
