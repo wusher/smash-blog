@@ -18,8 +18,8 @@
 # add sitemap
 * create a post:
   # normal post
-  * add admin nav
-  * edit 
+  # add admin nav
+  ~ edit 
   * delete 
   * add security
   * add better error handling

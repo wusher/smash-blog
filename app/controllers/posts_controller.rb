@@ -1,8 +1,17 @@
 class PostsController < ApplicationController
   respond_to :html, :json
 
-  before_filter :load_post, :only => [:show]
-  before_filter :authenticate_admin!, :only => [:new, :create ]
+  before_filter :load_post, :only => [:show, :edit, :update]
+  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update]
+
+  def edit
+    respond_with @post
+  end
+
+  def update
+    @post.update_attributes(params[:post])
+    respond_with  @post
+  end
 
   def new
     @post = Post.new
@@ -11,9 +20,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create params[:post]
-    if params[:publish] == "true"
-      @post.publish
-    end
     respond_with  @post
   end
 

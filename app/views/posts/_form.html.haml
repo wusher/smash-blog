@@ -1,4 +1,9 @@
 .row
+  .sixteen.columns
+    %ul
+      - post.errors.full_messages.each do |message|
+        %li= message
+.row
   .eight.columns
     .row
       = form.label :title
@@ -13,7 +18,7 @@
     .row
       %label &nbsp;
       %button#publish_post.confirm_save_post Publish Post
-      %input#publish{ type: :hidden, name: "publish", value: post.published?.to_s}
+      = form.hidden_field :published, value: post.published?.to_s
 .row
   .eight.columns
     = form.label :body

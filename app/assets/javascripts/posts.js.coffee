@@ -1,7 +1,7 @@
 
 
 
-$(->
+setupPageForPost = () ->
   $(".datepicker").pickadate()
   $("form").delegate ".confirm_save_post", "click", (e) ->
     response = confirm("Are you sure you want to publish this post?")
@@ -33,11 +33,14 @@ $(->
   )
 
   publishPost = $("#publish_post")
-  publishState = $("#publish")
+  publishState = $("#post_published")
   publishPost.on("click", (e) ->
     if publishState.val() == "true"
       publishState.val("false")
     else
       publishState.val("true")
   )
-)
+
+
+$(document).ready(setupPageForPost)
+$(window).bind('page:change', setupPageForPost)

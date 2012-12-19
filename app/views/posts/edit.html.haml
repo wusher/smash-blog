@@ -1,0 +1,6 @@
+
+- content_for :page_title do
+  = "Editing post: #{@post.slug || @post.id}"
+
+= form_for @post do |f|
+  = render :partial => 'form', locals: { post: @post, form: f }

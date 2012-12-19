@@ -1,6 +1,50 @@
 require 'spec_helper'
 
 describe PostsController do
+  describe "#edit" do
+    Given(:slug) { "my-title" }
+    Given(:target_post) { stub_model(Post, {id: 42, slug: slug}) }
+    Given(:update_params) { { body: "valid", title: "valid title"} }
+    Given { Post.stub(:find_by_slug).with(slug).and_return(target_post) }
+    context "admin is logged in" do
+      Given { subject.stub(:authenticate_admin!).and_return(true) }
+      context "successful update" do
+        Given { target_post.stub(:update_attributes).with(any_args).and_return(true) }
+        When { put :edit, id: slug, post: update_params }
+        Then { response.should be_successful }
+        Then { assigns(:post).should == target_post }
+      end
+      context "failed update" do 
+        Given { target_post.stub(:update_attributes).with(any_args).and_return(true) }
+        When { put :edit, id: slug, post: update_params }
+        Then { response.should be_successful }
+        Then { assigns(:post).should == target_post }
+      end
+    end
+    context "no one is logged in" do
+      Given { subject.stub(:current_admin).and_return(nil) }
+      When { put :edit, id: slug, post: update_params }
+      Then { response.code.should == "302" }
+    end
+  end
+  describe "#edit" do
+    Given(:slug) { "my-title" }
+    Given(:target_post) { stub_model(Post, {id: 42, slug: slug}) }
+    Given { Post.stub(:find_by_slug).with(slug).and_return(target_post) }
+    context "admin is logged in" do
+      Given { subject.stub(:authenticate_admin!).and_return(true) }
+      When { get :edit, id: slug }
+      Then { response.code.should == "200" }
+      Then { response.should render_template(:edit) }
+      Then { assigns(:post).should be_present }
+      Then { assigns(:post).should == target_post }
+    end
+    context "no one is logged in" do
+      Given { subject.stub(:current_admin).and_return(nil) }
+      When { get :edit, id: slug }
+      Then { response.code.should == "302" }
+    end
+  end
   describe "#new" do
     context "admin is logged in" do
       Given { subject.stub(:authenticate_admin!).and_return(true) }
@@ -72,7 +116,7 @@ describe PostsController do
     context "find by slug" do
       Given(:slug) { "my-title" }
       Given(:target_post) { stub_model(Post, slug: slug) }
-      context "post fond" do
+      context "post found" do
         Given { Post.stub(:find_by_slug).and_return(target_post) }
         When { get :show, id: slug }
         Then { response.should be_successful }
