@@ -10,6 +10,26 @@ setupPageForPost = () ->
     response = confirm("Are you sure you want to save this post?")
     unless response
       e.preventDefault()
+
+  $("form").delegate "textarea" , "keydown", (e) ->
+    return unless e.keyCode == 9
+    e.preventDefault()
+
+    start = @selectionStart
+    end = @selectionEnd
+    self = $(this)
+    value = self.val()
+
+    self.val "#{value.substring(0,start)}  #{value.substring(end)}"
+    @selectionStart = @selectionEnd = start + 2
+    _.defer ()-> self.trigger("keypress")
+
+  $("form").delegate "textarea" , "keydown", (e) ->
+    return unless e.keyCode == 8
+    self = $(this)
+    _.defer ()-> self.trigger("keypress")
+
+
       
   # for creating a form 
   postBody = $("#post_body")
