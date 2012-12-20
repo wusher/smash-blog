@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   before_validation :update_html
   before_validation :update_slug
 
-  default_scope order("pubdate is null desc").order("pubdate desc")
+  default_scope order("published").order("pubdate is null desc").order("pubdate desc")
   scope :published, where(published: true)
 
   def publish!

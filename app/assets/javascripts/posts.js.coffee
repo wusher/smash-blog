@@ -29,7 +29,7 @@ setupPageForPost = () ->
         bodyPreview.html(newMarkdown)
       })
 
-  updatePreview = _.debounce(updatePreview, 200)
+  updatePreview = _.debounce(updatePreview, 150)
 
   postBody.on("keypress", ->
     updatePreview()

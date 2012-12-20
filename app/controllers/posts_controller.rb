@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 
   def index
     if current_admin.present?
-      @posts = Post.all
+      @posts = Post.scoped
     else
       @posts = Post.published
     end

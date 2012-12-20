@@ -16,13 +16,14 @@
 # make layout pretty 
 # only display published 
 # add sitemap
-* create a post:
+# create a post:
   # normal post
   # add admin nav
   # edit 
-  # delete
-  * add security
-  * add better error handling
+  # delete 
+  # add security
+  # add better error handling
+* start writing
 * add pagination and an overview 
 * add tags 
 * add other posts types
