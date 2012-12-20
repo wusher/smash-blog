@@ -20,7 +20,7 @@
   # normal post
   # add admin nav
   # edit 
-  ~ delete 
+  # delete
   * add security
   * add better error handling
 * add pagination and an overview 

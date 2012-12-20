@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   attr_accessible :body, :pubdate, :title, :published
 
-  validates :slug, :presence => true, :uniqueness => { case_sensitive: false } , :if => :published?
+  validates :slug, :presence => true, :uniqueness => { case_sensitive: false }
   validates :title, :presence => true, :if => :published?
   validates :pubdate, :presence => true, :if => :published?
 

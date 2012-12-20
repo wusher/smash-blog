@@ -17,7 +17,7 @@
       %button.confirm_save_post{ :type => "submit" } Save Post
     .row
       %label &nbsp;
-      %button#publish_post.confirm_save_post Publish Post
+      %button#publish_post= post.published? ? "Unpublish Post" : "Publish Post"
       = form.hidden_field :published, value: post.published?.to_s
 .row
   .eight.columns

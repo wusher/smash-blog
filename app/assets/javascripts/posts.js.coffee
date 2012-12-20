@@ -3,8 +3,11 @@
 
 setupPageForPost = () ->
   $(".datepicker").pickadate()
+
+  publishState = $("#post_published")
+
   $("form").delegate ".confirm_save_post", "click", (e) ->
-    response = confirm("Are you sure you want to publish this post?")
+    response = confirm("Are you sure you want to save this post?")
     unless response
       e.preventDefault()
       
@@ -26,19 +29,28 @@ setupPageForPost = () ->
         bodyPreview.html(newMarkdown)
       })
 
-  updatePreview = _.debounce(updatePreview, 1000)
+  updatePreview = _.debounce(updatePreview, 200)
 
   postBody.on("keypress", ->
     updatePreview()
   )
+  updatePreview()
 
   publishPost = $("#publish_post")
-  publishState = $("#post_published")
   publishPost.on("click", (e) ->
-    if publishState.val() == "true"
-      publishState.val("false")
+    isPublished = publishState.val() == "true"
+    message = "Publish this post?"
+    if isPublished
+      message = "Unpublish this post?"
+    response = confirm(message)
+    if response
+      if isPublished
+        publishState.val("false")
+      else
+        publishState.val("true")
     else
-      publishState.val("true")
+      e.preventDefault()
+
   )
 
 
