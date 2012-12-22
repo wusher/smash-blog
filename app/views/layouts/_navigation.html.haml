@@ -1,7 +1,7 @@
 %nav
   %ul
     %li= link_to "~ about me ~", about_me_path
-    %li= link_to "~ archives ~", about_me_path
     - if current_admin.present? 
+      %li= link_to "~ archives (make this usefule) ~", about_me_path
       %li= link_to "~ new post ~", new_post_path
       %li= link_to "~ sign out ~", destroy_admin_session_path

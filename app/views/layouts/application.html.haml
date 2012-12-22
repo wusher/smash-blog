@@ -2,7 +2,7 @@
 %head
   - title = yield(:page_title)
 
-  %title= "#{title.present? ? title + " ~ " : ""   }witty title"
+  %title= "#{title.present? ? title + " ~ " : ""   }sketching with code"
   = stylesheet_link_tag    "application", :media => "all" 
   = javascript_include_tag "application" 
   = csrf_meta_tags 
@@ -20,7 +20,7 @@
       .dark
   %header.nav
     %h1 
-      = link_to "wusher", root_path
+      = link_to "sketching with code", root_path
     = render partial: "layouts/navigation"
   .container.body
     .notice= notice
