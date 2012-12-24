@@ -76,7 +76,7 @@ describe PostsController do
   describe "#index" do
     context "admin is logged in" do
       Given(:all_posts) { [ stub_model(Post), stub_model(Post)] } 
-      Given { Post.stub(:all).and_return(all_posts) }
+      Given { Post.stub(:scoped).and_return(all_posts) }
       Given { subject.stub(:current_admin).and_return(stub_model(Admin)) }
       When { get :index }  
       Then { response.code.should == "200" }
