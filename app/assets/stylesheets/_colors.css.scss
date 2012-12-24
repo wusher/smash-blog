@@ -57,11 +57,26 @@
 /*$secondary_color_dark: #F60861;*/
 
 /*http://www.colourlovers.com/palette/41095/leatherbound*/
-$light_color: #F5F4D7;
-$dark_color: #535233;
-$primary_color: #951F2B;
-$secondary_color_bright: #E0DFB1;
-$secondary_color_dark: #A5A36C;
+/*$light_color: #F5F4D7;*/
+/*$dark_color: #535233;*/
+/*$primary_color: #951F2B;*/
+/*$secondary_color_bright: #E0DFB1;*/
+/*$secondary_color_dark: #A5A36C;*/
+
+/*http://www.colourlovers.com/palette/2596576/b_l_o_s_s_o_m_s*/
+/*$light_color: #FFD8CF;*/
+/*$dark_color: #2D2324;*/
+/*$primary_color: #713229;*/
+/*$secondary_color_bright: #F7B3A6;*/
+/*$secondary_color_dark: #E58586;*/
+
+
+/*http://www.colourlovers.com/palette/2596618/Carl_Larsson_APC_5*/
+$light_color: #EEDDC1;
+$dark_color: #423A37;
+$primary_color: #93966B;
+$secondary_color_bright: #E2BF7F;
+$secondary_color_dark: #5E5955;
 
 $darken_amount: 7%;
 $light_color: lighten($light_color, 5%);
