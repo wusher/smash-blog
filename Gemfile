@@ -46,6 +46,7 @@ group :development, :test do
   gem 'pry'
   gem 'irbtools', :require => false
   gem 'rspec-rails'
+  gem 'rspec-radar'
   gem 'rspec-fire'
   gem 'rspec-given'
 end

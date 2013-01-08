@@ -61,6 +61,8 @@ require 'rspec/fire'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+require 'rspec/radar'
+
 RSpec.configure do |config|
   # ## Mock Framework
   #
