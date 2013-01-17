@@ -23,7 +23,7 @@
   # delete 
   # add security
   # add better error handling
-* start writing
+# start writing
 * add pagination and an overview 
 * add tags 
 * add other posts types
