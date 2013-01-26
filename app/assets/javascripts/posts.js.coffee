@@ -37,6 +37,7 @@ setupPageForPost = () ->
 
   updatePreview = ->
     markdown = postBody.val()
+    return unless markdown
     data = { markdown: markdown }
 
     $.ajax({
