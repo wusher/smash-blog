@@ -32,8 +32,13 @@ GEM
     arel (3.0.2)
     awesome_print (1.0.2)
     bcrypt-ruby (3.0.1)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
     boson (1.1.1)
     builder (3.0.4)
+    bullet (4.3.0)
+      uniform_notifier
     clipboard (1.0.1)
     coderay (1.0.8)
     coffee-rails (3.2.2)
@@ -216,6 +221,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     underscore-rails (1.4.3)
     unicode-display_width (0.1.1)
+    uniform_notifier (1.1.1)
     warden (1.2.1)
       rack (>= 1.0)
     wirb (0.4.2)
@@ -225,6 +231,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors (~> 0.3.2)
+  bullet (~> 4.3.0)
   coderay (~> 1.0.8)
   coffee-rails (~> 3.2.1)
   devise

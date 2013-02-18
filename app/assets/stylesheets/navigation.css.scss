@@ -2,14 +2,16 @@
 
 header.nav {
   float:right;
-  position: absolute;
+  position: fixed;
   right: 0px;
+  top: 44px;
   z-index: 10;
 }
 
 
 .nav {
   border-bottom: solid 3px $border_color;
+  border-top: solid 3px $border_color;
   text-align: center;
   width: 150px;
   h1 {
