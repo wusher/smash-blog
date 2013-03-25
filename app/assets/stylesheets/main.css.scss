@@ -84,14 +84,16 @@ footer.footer{
   background-color: $light_color;
   background-image: url('background.png');
   position: relative;
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 4px rgba(0,0,0,0.1) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1) inset;
+  -moz-box-shadow:    0 1px 4px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1) inset;
+  box-shadow:         0 1px 4px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1) inset;
   &:before, &:after { 
     content:"";
     position:absolute;
     z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.4);
+    -moz-box-shadow:   0 0 20px rgba(0,0,0,0.4);
+    box-shadow:        0 0 20px rgba(0,0,0,0.4);
     top:50%;
     bottom:0;
     left:10px;

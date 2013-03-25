@@ -10,6 +10,7 @@
 
 ul.links {
   list-style-type: none;
+  padding: 0px;
   a {
     color: inherit;
     display: inline-block; 
@@ -17,7 +18,8 @@ ul.links {
     font-style: italic;
     padding: 20px;
     text-align: center;
-    min-width: 250px;
+    width: 55%;
+    max-width: 250px;
     -webkit-transition-property: all;
     -webkit-transition-duration: 0.75s;
     -webkit-transition-timing-function: ease-out;

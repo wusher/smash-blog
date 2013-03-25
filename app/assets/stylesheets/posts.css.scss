@@ -103,10 +103,10 @@ article header {
       -webkit-transition-timing-function: ease;
       -moz-transition-property: all;
       -moz-transition-duration: 0.75s;
-      -moz-transition-timing-function: ease-out;
+      -moz-transition-timing-function: ease;
       transition-property: all;
       transition-duration: 0.75s;
-      transition-timing-function: ease-out;
+      transition-timing-function: ease;
       &:visited {
         color: $dark_color;
       }
