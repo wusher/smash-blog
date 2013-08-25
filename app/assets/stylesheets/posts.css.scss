@@ -7,14 +7,15 @@ article header {
 
 .post {
   font-size: 13pt;
+  line-height: 27px; 
   margin: 40px 0;
   padding: 0px;
 
   code {
-    border: 1px solid $border_color;
+    background-color: $light_color;
     display: inline-block;
     font-family: "ubuntu-mono", Monaco, monospace;
-    font-size: 10pt;
+    font-size: 12pt;
     padding: 0px 2px;
     margin:  0px 2px;
   }
@@ -36,7 +37,7 @@ article header {
         color: inherit; 
         display: block;
         font-size: 18pt; 
-        font-weight: bold;
+        font-weight: normal;
         padding: 5px;
         text-decoration:none;
         -webkit-transition-property: all;
@@ -92,7 +93,7 @@ article header {
   .post-body {
     min-height: 200px;
     p:first-child {
-      margin-top: 10px;
+      margin-top: 0px;
     }
     a {
       text-decoration: underline;
@@ -157,6 +158,10 @@ article header {
   .post .info {
     border-left: none;
   }
-  
+  .post-body {
+    p:first-child {
+      margin-top: 20px;
+    }
+  }
 }
 

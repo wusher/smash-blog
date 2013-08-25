@@ -1,5 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :pubdate, :title, :published
 
   validates :slug, :presence => true, :uniqueness => { case_sensitive: false }, :if => :published?
   validates :title, :presence => true, :if => :published?
@@ -8,8 +7,8 @@ class Post < ActiveRecord::Base
   before_validation :update_html
   before_validation :update_slug
 
-  default_scope order("published").order("pubdate is null desc").order("pubdate desc")
-  scope :published, where(published: true)
+  default_scope -> { order("published").order("pubdate is null desc").order("pubdate desc") }
+  scope :published, -> { where(published: true) } 
 
   def publish!
     if self.publish

@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
-//= require tabs
 //= require turbolinks
 //= require_tree .

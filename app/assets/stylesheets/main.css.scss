@@ -1,28 +1,28 @@
 @import "colors";
 
-@font-face {
-  font-family: "fanwood";
-  src: url("fanwood_text-webfont.woff");
-}
-@font-face {
-  font-family: "fanwood";
-  src: url("fanwood_text_italic-webfont.woff");
-  font-style: italic;
-}
+/*@font-face {*/
+  /*font-family: "fanwood";*/
+  /*src: url("fanwood_text-webfont.woff");*/
+/*}*/
+/*@font-face {*/
+  /*font-family: "fanwood";*/
+  /*src: url("fanwood_text_italic-webfont.woff");*/
+  /*font-style: italic;*/
+/*}*/
 
-@font-face {
-  font-family: "ubuntu-mono";
-  src: url("ubuntu-mono.woff");
-  font-weight: normal;
-  font-style: normal;
-}
+/*@font-face {*/
+  /*font-family: "ubuntu-mono";*/
+  /*src: url("ubuntu-mono.woff");*/
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+/*}*/
 
 
 body {
   background-color: $light_color;
   background-image: url('background.png');
   color: $dark_color;
-  font-family:  "fanwood", serif;
+  font-family:  "fanwood", 'PT Serif', Georgia, Times, 'Times New Roman', serif;
   margin: 0px;
 }
 
