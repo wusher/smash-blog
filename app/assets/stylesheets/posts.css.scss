@@ -13,6 +13,9 @@ article header {
 
   code {
     background-color: $light_color;
+    -webkit-box-shadow: 0 0px 14px rgba(0,0,0,0.15) inset;
+    -moz-box-shadow:    0 0px 14px rgba(0,0,0,0.15) inset;
+    box-shadow:         0 0px 14px rgba(0,0,0,0.15) inset;
     display: inline-block;
     font-family: "ubuntu-mono", Monaco, monospace;
     font-size: 12pt;
