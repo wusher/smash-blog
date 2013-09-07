@@ -122,40 +122,6 @@ article header {
   }
 }
 
-/* input forms */
-.new_post, .edit_post {
-  label, .label {
-    display: block;
-    font-size: 16pt;
-    font-weight: bold;
-  }
-  input, button { 
-    border: 1px solid $border_color;
-    display: block;
-    font-family: "fanwood";
-    font-size: 14pt;
-    padding: 5px 2px;
-    width: 97%;
-  }
-  button { 
-    background-color: $secondary_color_bright;
-    cursor: pointer;
-  }
-  textarea {
-    border: 1px solid $border_color;
-    font-family: "ubuntu-mono";
-    font-size: 12px;
-    padding: 5px 2px;
-    width: 97%;
-  }
-  #preview { 
-    border: 1px solid $border_color;
-    height: 400px; 
-    overflow: scroll;
-    padding: 10px;
-  
-  }
-}
 
 @media only screen and (max-width: 767px) {
   .post .info {

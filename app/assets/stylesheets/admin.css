@@ -12,5 +12,6 @@
  *= require layout
  *= require skeleton
  *= require_tree ./public
+ *= require_tree ./admin
 */
 
