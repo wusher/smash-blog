@@ -34,10 +34,12 @@ class PostsController < ApplicationController
     else
       @posts = Post.published
     end
+    @posts.map!{ |x| PostPresentor.new x}
     respond_with @posts
   end
 
   def show
+    @post = PostPresentor.new(@post)
     respond_with @post
   end
 
