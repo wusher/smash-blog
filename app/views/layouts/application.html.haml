@@ -5,12 +5,16 @@
   %title= "#{title.present? ? title + " ~ " : ""   }sketching with code"
   %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
   %meta{ name: "google-site-verification", content: "eE2AQzEYsFhGuFm8a2Yuaw2Dc-NTiIfdMWHxjDF_9Zg" }
-  = stylesheet_link_tag    "application", :media => "all" 
-  = javascript_include_tag "application" 
-  = csrf_meta_tags 
+  - if current_admin.present?
+    = stylesheet_link_tag    "admin", :media => "all"
+    = javascript_include_tag "admin"
+  - else
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+  = csrf_meta_tags
 
 %body
-    
+
   .liner
     .line_one
       .dark
@@ -21,7 +25,7 @@
     .line_four
       .dark
   %header.nav
-    %h1 
+    %h1
       = link_to "sketching with code", root_path
     = render partial: "layouts/navigation"
   .container.body
