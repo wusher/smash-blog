@@ -31,9 +31,6 @@ GEM
     atomic (1.1.13)
     awesome_print (1.1.0)
     bcrypt-ruby (3.1.1)
-    better_errors (0.3.2)
-      coderay (>= 1.0.0)
-      erubis (>= 2.7.0)
     boson (1.2.4)
     boson-more (0.2.2)
       boson (>= 1.2.0)
@@ -257,7 +254,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors (~> 0.3.2)
   bullet (~> 4.3.0)
   coderay (~> 1.0.9)
   coffee-rails (~> 4.0.0)
