@@ -1,4 +1,4 @@
-- cache post do
+- cache_if(current_admin.nil?, post)  do
   %article.post.row
     %header.three.columns.info.alpha
       %h2.title
