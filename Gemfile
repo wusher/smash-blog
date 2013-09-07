@@ -32,7 +32,7 @@ gem 'sass-rails', "~> 4.0.0"
 gem 'coffee-rails', "~> 4.0.0"
 gem 'therubyracer'
 gem 'uglifier', '>= 1.0.3'
-
+gem "rack-mini-profiler", "~> 0.1.31"
 
 group :development do
   gem 'guard', "~> 1.8.2"
