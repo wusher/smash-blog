@@ -1,13 +1,13 @@
-%article.post.row
-  %header.three.columns.info.alpha
-    %h2.title
-      =link_to post.title, post_path(post.slug || post.id)
-    %timedate.pubdate{ pubdate: "pubdate"}= post.pubdate.present? && post.pubdate.strftime("%m/%d/%y")
-    - if current_admin.present?
-      %ul.admin_nav
-        %li.message= post.published? ? "Published" : "Work in progress"
-        %li= link_to "edit", edit_post_path(post.slug || post.id)
-        %li= link_to "delete", post_path(post.slug || post.id), confirm: "are you sure?", method: :delete
-  .ten.columns.post-body!= post.body_html
-  .three.columns.omega
-    
+- cache post do
+  %article.post.row
+    %header.three.columns.info.alpha
+      %h2.title
+        =link_to post.title, post_path(post.slug || post.id)
+      %timedate.pubdate{ pubdate: "pubdate"}= post.pubdate.present? && post.pubdate.strftime("%m/%d/%y")
+      - if current_admin.present?
+        %ul.admin_nav
+          %li.message= post.published? ? "Published" : "Work in progress"
+          %li= link_to "edit", edit_post_path(post.slug || post.id)
+          %li= link_to "delete", post_path(post.slug || post.id), confirm: "are you sure?", method: :delete
+    .ten.columns.post-body!= post.body_html
+    .three.columns.omega
