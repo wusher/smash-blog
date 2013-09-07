@@ -14,7 +14,7 @@ group :production do
   gem 'rails_12factor', "~> 0.0.2"
 end
 
-gem 'devise', "~> 3.0.3"
+gem 'devise', "~> 3.1.0"
 gem 'jquery-rails', "~> 3.0.4"
 gem 'haml-rails', "~> 0.4"
 gem 'skeleton-rails', "~> 0.1.0"
