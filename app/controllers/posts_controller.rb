@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update_attributes(params[:post])
+    @post.update_attributes(post_params)
     respond_with  @post
   end
 
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create params[:post]
+    @post = Post.create post_params
     respond_with  @post
   end
 
@@ -48,6 +48,11 @@ class PostsController < ApplicationController
     if @post.nil? && current_admin.present? && params[:id].to_i > 0
       @post = Post.find params[:id]
     end
+
     raise ActiveRecord::RecordNotFound unless @post
+  end
+
+  def post_params
+    params.require("post").permit(:title, :pubdate, :published, :body)
   end
 end
