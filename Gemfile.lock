@@ -47,6 +47,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     daemons (1.1.9)
+    dalli (2.6.4)
     devise (3.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -129,6 +130,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     method_locator (0.0.4)
     method_source (0.8.2)
     methodfinder (1.2.5)
@@ -260,6 +262,7 @@ DEPENDENCIES
   bullet (~> 4.3.0)
   coderay (~> 1.0.9)
   coffee-rails (~> 4.0.0)
+  dalli
   devise (~> 3.1.0)
   guard (~> 1.8.2)
   guard-rspec (~> 3.0.2)
@@ -267,6 +270,7 @@ DEPENDENCIES
   heroku (~> 2.40.0)
   irbtools (~> 1.5.0)
   jquery-rails (~> 3.0.4)
+  memcachier
   newrelic_rpm (~> 3.6.6.147)
   pg (~> 0.16.0)
   pry (~> 0.9.12.2)

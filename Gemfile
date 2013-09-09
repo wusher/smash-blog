@@ -21,6 +21,9 @@ gem 'skeleton-rails', "~> 0.1.0"
 gem 'underscore-rails'
 gem "turbolinks", "~> 1.3.0"
 
+gem 'memcachier'
+gem 'dalli'
+
 gem "redcarpet", "~> 2.1.1"
 gem "coderay", "~> 1.0.9"
 
