@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '4.0.0' 
+gem 'rails', '4.0.0'
 gem 'heroku', "~> 2.40.0"
 
-group :development, :test do 
+group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do 
+group :production do
   gem 'thin', "~> 1.5.1"
   gem 'pg', "~> 0.16.0"
   gem 'rails_12factor', "~> 0.0.2"
@@ -26,6 +26,7 @@ gem 'dalli'
 
 gem "redcarpet", "~> 2.1.1"
 gem "coderay", "~> 1.0.9"
+gem "truncate_html", "~> 0.9.2"
 
 gem 'newrelic_rpm', "~> 3.6.6.147"
 
@@ -45,7 +46,7 @@ group :development do
   gem "bullet", "~> 4.3.0"
 end
 
-group :development, :test do 
+group :development, :test do
   gem 'spork', "~> 0.9.2"
   gem 'pry', "~> 0.9.12.2"
   gem 'irbtools', "~> 1.5.0", :require => false

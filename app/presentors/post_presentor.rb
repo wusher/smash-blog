@@ -4,6 +4,10 @@ class PostPresentor < SimpleDelegator
     super.try(:strftime,"%m/%d/%y")
   end
 
+  def pubday
+    __post.pubdate.day.ordinalize
+  end
+
   def slug_id
     __post.slug || __post.id
   end

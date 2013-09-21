@@ -1,0 +1,11 @@
+
+- cache_if( false && current_admin.nil?,cache_key_for_posts)  do
+  .archives
+    - @posts.each do |month, posts|
+      .row
+        .five.columns.alpha
+          \ &nbsp;
+        .five.columns
+          %h3= "~ #{month.strftime "%B %Y"} ~"
+          - as_presentors(posts.reverse).each do |post|
+            = render partial: "post_archive", locals: { post: post }

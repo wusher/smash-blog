@@ -38,6 +38,11 @@ class PostsController < ApplicationController
     respond_with @posts
   end
 
+  def archives
+    @posts = Post.published.group_by { |x| x.pubdate.beginning_of_month }
+    respond_with @posts
+  end
+
   def show
     @post = PostPresentor.new(@post)
     respond_with @post

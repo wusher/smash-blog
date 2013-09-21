@@ -1,5 +1,58 @@
 @import "colors";
 
+
+/*archive date row*/
+
+.archives { 
+  h3 { 
+    text-align: center;
+    color: $dark_color;
+  }
+  .post_overview {
+    .date_box { 
+      float: left; 
+      margin: 7px;
+    }
+
+    timedate {
+      background-color: $primary_color;
+      color: $light_color;
+      display: table-cell;
+      font-weight: bold; 
+      font-size: 25px;
+      height: 60px;
+      margin: 7px;
+      text-align: center;
+      text-shadow: 0px 0px  15px black;
+      vertical-align: middle;
+      width: 60px;
+    }
+
+    h4 {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      text-align: center;
+    } 
+
+    .preview { 
+      padding: 10px;
+      line-height: initial; 
+      font-size: 12px;
+      a { 
+        text-decoration: none;
+        color: $dark_color;
+      }
+      p:first-child { 
+        -webkit-margin-before: 0;
+        -moz-margin-before: 0;
+        margin-before: 0;
+      }
+    }
+  }
+}
+
+
 article header { 
   box-shadow: none;
   float:none;

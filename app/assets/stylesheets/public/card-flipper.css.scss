@@ -1,0 +1,84 @@
+@import "colors";
+/*From http://davidwalsh.name/css-flip*/
+
+.flip-container {
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  height: 75px;
+  max-height: 75px;
+  width: 396px;
+  display: block;
+}
+.flip-container .back {
+  overflow: hidden;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: $light_color;
+  background-image: none;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2), 0 0 4px rgba(0,0,0,0.1) inset;
+  -moz-box-shadow:    0 1px 4px rgba(0,0,0,0.2), 0 0 4px rgba(0,0,0,0.1) inset;
+  box-shadow:         0 1px 4px rgba(0,0,0,0.2), 0 0 4px rgba(0,0,0,0.1) inset;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.vertical.flip-container {
+	position: relative;
+}
+
+.vertical .back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.vertical.flip-container .flipper {
+  -webkit-transform-origin: 100% 37.5px; /* half of height */
+  -moz-transform-origin: 100% 37.5px; /* half of height */
+  transform-origin: 100% 37.5px; /* half of height */
+}
+
+.vertical.flip-container:hover .flipper {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+

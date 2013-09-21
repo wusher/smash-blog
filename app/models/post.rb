@@ -8,7 +8,13 @@ class Post < ActiveRecord::Base
   before_validation :update_slug
 
   default_scope -> { order("published").order("pubdate is null desc").order("pubdate desc") }
-  scope :published, -> { where(published: true) } 
+  scope :published, -> { where(published: true) }
+
+  def self.as_presentors(posts=nil)
+    if posts
+      posts.map { |x| PostPresentor.new x }
+    end
+  end
 
   def publish!
     if self.publish
