@@ -1,11 +1,12 @@
 
-.row.post_overview.flip-container.vertical
-  %a.pannel_link{ href: post_path(post.slug_id) } 
-    %span
-  .flipper
-    .front
-      .date_box
-        %timedate= post.pubday
-      %h4= post.title
-    .back
-      .preview= truncate_html(post.body_html, length: 175)
+- cache_if(current_admin.nil?, post)  do
+  .row.post_overview.flip-container.vertical
+    %a.pannel_link{ href: post_path(post.slug_id) } 
+      %span
+    .flipper
+      .front
+        .date_box
+          %timedate= post.pubday
+        %h4= post.title
+      .back
+        .preview= truncate_html(post.body_html, length: 175)
