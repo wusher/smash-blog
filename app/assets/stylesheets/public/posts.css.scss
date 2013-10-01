@@ -65,10 +65,9 @@ article header {
   padding: 0px;
 
   code {
-    background-color: $light_color;
-    -webkit-box-shadow: 0 0px 14px rgba(0,0,0,0.15) inset;
-    -moz-box-shadow:    0 0px 14px rgba(0,0,0,0.15) inset;
-    box-shadow:         0 0px 14px rgba(0,0,0,0.15) inset;
+    -webkit-box-shadow: 0 0px 40px rgba(0,0,0,0.05) inset;
+    -moz-box-shadow:    0 0px 40px rgba(0,0,0,0.05) inset;
+    box-shadow:         0 0px 40px rgba(0,0,0,0.05) inset;
     display: inline-block;
     font-family: "ubuntu-mono", Monaco, monospace;
     font-size: 12pt;
@@ -77,9 +76,6 @@ article header {
   }
 
   .info {
-    border: solid 3px $border_color;
-    border-right: none;
-    border-left: none;
     font-style: italic;
     text-align: center; 
     .pubdate {
@@ -94,7 +90,7 @@ article header {
         display: block;
         font-size: 18pt; 
         font-weight: normal;
-        padding: 5px;
+        padding: 0 5px 5px 5px;
         text-decoration:none;
         -webkit-transition-property: all;
         -webkit-transition-duration: 0.75s;
