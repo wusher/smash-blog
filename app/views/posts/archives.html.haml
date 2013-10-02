@@ -1,5 +1,5 @@
 
-- cache_if(current_admin.nil?,cache_key_for_posts)  do
+- cache_if(current_admin.nil?, cache_key_for_posts + "archives")  do
   .archives
     - @posts.each do |month, posts|
       .row
