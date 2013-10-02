@@ -15,7 +15,7 @@
     }
 
     timedate {
-      background-color: $primary_color;
+      background-color: $secondary_color_dark;
       color: $light_color;
       display: table-cell;
       font-weight: bold; 
@@ -67,9 +67,7 @@ article header {
   padding: 0px;
 
   code {
-    -webkit-box-shadow: 0 0px 40px rgba(0,0,0,0.05) inset;
-    -moz-box-shadow:    0 0px 40px rgba(0,0,0,0.05) inset;
-    box-shadow:         0 0px 40px rgba(0,0,0,0.05) inset;
+    color: darken($dark_color, $darken_amount);
     display: inline-block;
     font-family: "ubuntu-mono", Monaco, monospace;
     font-size: 12pt;
@@ -145,7 +143,6 @@ article header {
   }
 
   .post-body {
-    min-height: 200px;
     p:first-child {
       margin-top: 0px;
     }

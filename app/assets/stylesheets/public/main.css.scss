@@ -93,7 +93,6 @@ footer.footer{
 
 .paper_shadow, .CodeRay {
   background-color: $light_color;
-  background-image: image-url('background.png');
   position: relative;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1) inset;
   -moz-box-shadow:    0 1px 4px rgba(0,0,0,0.1), 0 0 4px rgba(0,0,0,0.1) inset;
