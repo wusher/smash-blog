@@ -36,11 +36,11 @@
 /*$secondary_color_dark: #E85A50;*/
 
 /*http://www.colourlovers.com/palette/2541061/One_Day_Youll_Fly*/
-/*$light_color: #F5EECF;*/
-/*$dark_color: #70585D;*/
-/*$primary_color: #988580;*/
-/*$secondary_color_bright: #C1DAD0;*/
-/*$secondary_color_dark: #91AEBF;*/
+$light_color: #f5eecf;
+$dark_color: #70585d;
+$primary_color: #988580;
+$secondary_color_bright: #c1dad0;
+$secondary_color_dark: #91aebf;
 
 /*http://www.colourlovers.com/palette/2518524/heartbroken*/
 /*$light_color: #D9D3B3;*/
@@ -57,11 +57,11 @@
 /*$secondary_color_dark: #F60861;*/
 
 /*http://www.colourlovers.com/palette/41095/leatherbound*/
-$light_color: #F5F4D7;
-$dark_color: #535233;
-$primary_color: #951F2B;
-$secondary_color_bright: #E0DFB1;
-$secondary_color_dark: #A5A36C;
+/*$light_color: #F5F4D7;*/
+/*$dark_color: #535233;*/
+/*$primary_color: #951F2B;*/
+/*$secondary_color_bright: #E0DFB1;*/
+/*$secondary_color_dark: #A5A36C;*/
 
 /*http://www.colourlovers.com/palette/2596576/b_l_o_s_s_o_m_s*/
 /*$light_color: #FFD8CF;*/
@@ -77,6 +77,13 @@ $secondary_color_dark: #A5A36C;
 /*$primary_color: #93966B;*/
 /*$secondary_color_bright: #E2BF7F;*/
 /*$secondary_color_dark: #5E5955;*/
+
+/*http://www.colourlovers.com/palette/3049555/Normandy*/
+/*$light_color: #E8E8CF;*/
+/*$dark_color: #283A4A;*/
+/*$primary_color: #BF4545;*/
+/*$secondary_color_bright: #E39B5F;*/
+/*$secondary_color_dark: #C8D9BD;*/
 
 $darken_amount: 7%;
 $light_color: lighten($light_color, 5%);
