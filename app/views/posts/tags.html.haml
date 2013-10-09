@@ -1,0 +1,3 @@
+- cache_if( current_admin.nil?, cache_key_for_tag(@posts, @tag_name))  do
+  %h2= @tag_name
+  = render @posts.as_presenters

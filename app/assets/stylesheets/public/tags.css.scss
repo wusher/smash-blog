@@ -1,0 +1,38 @@
+@import "colors";
+
+h2.tag { 
+  text-align: center;
+}
+
+ul.all_tags { 
+  font-size: 18pt;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li { margin: 0; padding: 0; }
+  a {
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.75s;
+    -webkit-transition-timing-function: ease-out;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.75s;
+    -moz-transition-timing-function: ease-out;
+    transition-property: all;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out;
+    max-width: 250px;
+    &:hover { 
+      background-color: $hover_color;
+      color: $primary_color;
+    }
+  } 
+  
+
+}

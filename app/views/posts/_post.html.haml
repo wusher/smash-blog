@@ -4,10 +4,19 @@
       %h2.title
         =link_to post.title, post_path(post.slug_id)
       %timedate.pubdate{ pubdate: "pubdate"}= post.pubdate
+      - if post.tags.present?
+        %ul.tags
+          - delimiter = ""
+          - post.tags.each do |tag|
+            %li
+              = delimiter
+              = link_to "#{tag} ", tag_path(tag)
+            - delimiter = "|"
       - if current_admin.present?
         %ul.admin_nav
           %li.message= post.published
           %li= link_to "edit", edit_post_path(post.slug_id)
           %li= link_to "delete", post_path(post.slug_id), confirm: "are you sure?", method: :delete
-    .ten.columns.post-body!= post.body_html
+    .ten.columns
+      .post-body!= post.body_html
     .three.columns.omega

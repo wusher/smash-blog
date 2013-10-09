@@ -9,11 +9,19 @@ class Post < ActiveRecord::Base
 
   default_scope -> { order("published").order("pubdate is null desc").order("pubdate desc") }
   scope :published, -> { where(published: true) }
+  scope :tagged, ->(tag_name) { joins(:tags).where("tags.name like ?", tag_name) }
+  scope :with_tags, -> { includes(:tags) }
 
-  def self.as_presentors(posts=nil)
-    if posts
-      posts.map { |x| PostPresentor.new x }
-    end
+  has_many :tags, through: :post_tag
+  has_many :post_tag
+
+  def self.as_presenters(presenter=nil)
+    all.map { |x| x.as_presenters(presenter)}
+  end
+
+  def as_presenters(presenter=nil)
+    presenter ||= PostPresentor
+    presenter.new(self)
   end
 
   def publish!

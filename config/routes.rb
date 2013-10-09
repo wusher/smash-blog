@@ -8,6 +8,8 @@ Smash::Application.routes.draw do
 
   get 'archives', :to => "posts#archives", :as => "posts_archives"
 
+  resources :tags, :only => [:show, :index]
+
   resources :posts do
     collection do
       get 'archives'

@@ -7,5 +7,5 @@
           \ &nbsp;
         .five.columns
           %h3= "~ #{month.strftime "%B %Y"} ~"
-          - as_presentors(posts.reverse).each do |post|
+          - as_presenters(posts.reverse).each do |post|
             = render partial: "post_archive", locals: { post: post }

@@ -16,6 +16,10 @@ class PostPresentor < SimpleDelegator
     __post.published? ? "Published" : "Work in progress"
   end
 
+  def tags
+    __post.tags.pluck(:name).sort
+  end
+
 
   private
 

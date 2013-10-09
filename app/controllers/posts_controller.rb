@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
   before_filter :load_post, :only => [:show, :edit, :update, :destroy]
 
+
   def destroy
     @post.destroy
     respond_with @post
@@ -14,7 +15,10 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update_attributes(post_params)
+    if @post.update_attributes(post_params)
+      Taggerator.new(@post).invoke(tags_params[:tags])
+    end
+
     respond_with  @post
   end
 
@@ -27,6 +31,7 @@ class PostsController < ApplicationController
     @post = Post.create post_params
     respond_with  @post
   end
+
 
   def index
     if current_admin.present?
@@ -61,5 +66,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require("post").permit(:title, :pubdate, :published, :body)
+  end
+
+  def tags_params
+    params.require("post").permit(:tags)
   end
 end

@@ -1,0 +1,4 @@
+
+%ul.all_tags
+  - @tags.each_with_index do |tag, index|
+    %li= link_to "#{tag.name} (#{tag.posts_count})", tag_path(tag.name)

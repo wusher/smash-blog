@@ -6,7 +6,13 @@ module PostsHelper
     "posts/all-#{count}-#{max_updated_at}"
   end
 
-  def as_presentors(posts)
+  def cache_key_for_tag(collection, tag_name)
+    count          = collection.count
+    max_updated_at = collection.maximum(:updated_at).try(:utc).try(:to_s, :number)
+    "posts/#{tag_name}-#{count}-#{max_updated_at}"
+  end
+
+  def as_presenters(posts)
     posts.map { |x| PostPresentor.new x }
   end
 

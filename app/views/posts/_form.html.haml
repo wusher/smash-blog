@@ -11,6 +11,9 @@
     .row
       = form.label :pubdate
       = form.text_field :pubdate, class: "datepicker"
+    .row
+      = form.label :tags
+      %input{ type: "text", name: "post[tags]", id: "post_tags", value: post.tags.pluck(:name).join(", ")}
   .eight.columns
     .row
       %label &nbsp;
