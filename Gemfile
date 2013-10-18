@@ -43,7 +43,7 @@ group :development do
   gem 'guard-rspec', "~> 3.0.2"
   gem 'rb-fsevent', '~> 0.9.1'
   gem "terminal-notifier-guard", "~> 1.5.3"
-  gem "bullet", "~> 4.3.0"
+  gem "bullet", "~> 4.6.0"
 end
 
 group :development, :test do

@@ -35,7 +35,7 @@ GEM
     boson-more (0.2.2)
       boson (>= 1.2.0)
     builder (3.1.4)
-    bullet (4.3.1)
+    bullet (4.6.0)
       uniform_notifier
     clipboard (1.0.5)
     coderay (1.0.9)
@@ -260,7 +260,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bullet (~> 4.3.0)
+  bullet (~> 4.6.0)
   coderay (~> 1.0.9)
   coffee-rails (~> 4.0.0)
   dalli

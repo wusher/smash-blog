@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update, :destroy]
   before_filter :load_post, :only => [:show, :edit, :update, :destroy]
+  before_filter :set_expires, :only => [ :show, :index ]
 
 
   def destroy
@@ -70,5 +71,9 @@ class PostsController < ApplicationController
 
   def tags_params
     params.require("post").permit(:tags)
+  end
+
+  def set_expires
+    expires_in(1.day, public: true)
   end
 end
