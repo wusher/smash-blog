@@ -1,7 +1,7 @@
 class TagPresenter < SimpleDelegator
 
   def posts
-    __tag.posts.with_tags.as_presenters
+    __tag.posts.published.with_tags.as_presenters
   end
 
   private
