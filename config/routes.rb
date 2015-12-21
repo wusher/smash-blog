@@ -16,5 +16,5 @@ Smash::Application.routes.draw do
     end
   end
 
-  root :to => 'posts#index'
+  root :to => 'about#me'
 end

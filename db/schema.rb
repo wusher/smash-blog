@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20131007150559) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20131007150559) do
     t.text     "body_html"
     t.date     "pubdate"
     t.boolean  "published"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "posts", ["pubdate"], name: "index_posts_on_pubdate"
