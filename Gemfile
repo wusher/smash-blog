@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'heroku', "~> 2.40.0"
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'sqlite3'

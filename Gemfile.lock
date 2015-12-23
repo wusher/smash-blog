@@ -55,6 +55,10 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    dotenv (2.0.2)
+    dotenv-rails (2.0.2)
+      dotenv (= 2.0.2)
+      railties (~> 4.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
     every_day_irb (1.5.0)
@@ -269,6 +273,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli
   devise (~> 3.1.0)
+  dotenv-rails
   guard (~> 1.8.2)
   guard-rspec (~> 3.0.2)
   haml-rails (~> 0.4)
