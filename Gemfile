@@ -39,6 +39,7 @@ gem 'uglifier', '>= 1.0.3'
 gem "rack-mini-profiler", "~> 0.1.31"
 
 group :development do
+  gem 'mina'
   gem 'guard', "~> 1.8.2"
   gem 'guard-rspec', "~> 3.0.2"
   gem 'rb-fsevent', '~> 0.9.1'

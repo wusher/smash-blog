@@ -135,10 +135,14 @@ GEM
     method_source (0.8.2)
     methodfinder (1.2.5)
     mime-types (1.25)
+    mina (0.3.7)
+      open4 (~> 1.3.4)
+      rake
     minitest (4.7.5)
     multi_json (1.7.9)
     netrc (0.7.7)
     newrelic_rpm (3.6.6.147)
+    open4 (1.3.4)
     ori (0.1.0)
     orm_adapter (0.4.0)
     paint (0.8.6)
@@ -272,6 +276,7 @@ DEPENDENCIES
   irbtools (~> 1.5.0)
   jquery-rails (~> 3.0.4)
   memcachier
+  mina
   newrelic_rpm (~> 3.6.6.147)
   pg (~> 0.16.0)
   pry (~> 0.9.12.2)
